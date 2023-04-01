@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:http/http.dart' as http;
+import 'package:sanatan_devotional_chants/models/lyrics_item.dart';
 import 'package:sanatan_devotional_chants/models/music_item.dart';
 
 final dataProvider =
@@ -10,8 +11,10 @@ final dataProvider =
 
 class DataProvider extends ChangeNotifier {
   List<MusicItem> _data = [];
+  List<LyricsItem> _lyrics = [];
 
   List<MusicItem> getData() => [..._data];
+  List<LyricsItem> getLyrics() => [..._lyrics];
 
   DataProvider() {
     _initData();
@@ -20,6 +23,7 @@ class DataProvider extends ChangeNotifier {
   _initData() async {
     debugPrint("Initilizing Data...");
     _data = await fetchMusicData();
+    _lyrics = await fetchLyricsData();
     notifyListeners();
   }
 }
@@ -33,6 +37,20 @@ Future<List<MusicItem>> fetchMusicData() async {
 
   for (Map<String, dynamic> e in dataList) {
     data.add(MusicItem.fromMap(e));
+  }
+
+  return data;
+}
+
+Future<List<LyricsItem>> fetchLyricsData() async {
+  List<LyricsItem> data = [];
+  var response = await http.get(Uri.parse(
+      "https://raw.githubusercontent.com/AmanNegi/SanatanDevotionalChants/main/data/lyrics.json"));
+  debugPrint(response.body.toString());
+  List dataList = json.decode(response.body)["lyrics"];
+
+  for (Map<String, dynamic> e in dataList) {
+    data.add(LyricsItem.fromMap(e));
   }
 
   return data;

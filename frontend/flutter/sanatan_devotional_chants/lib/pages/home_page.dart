@@ -20,11 +20,12 @@ class _HomePageState extends ConsumerState<HomePage> {
   Widget build(BuildContext context) {
     var data = ref.watch(dataProvider);
     return Scaffold(
-        appBar: AppBar(
-          title: const Text("Home Page"),
-        ),
-        body: ListView(
-          children: data.getData().map((e) {
+      appBar: AppBar(
+        title: const Text("Home Page"),
+      ),
+      body: ListView(
+        children: data.getData().map(
+          (e) {
             return ListTile(
               onTap: () async {
                 var filteredUrl = getUrl(e.audioUrl);
@@ -41,7 +42,9 @@ class _HomePageState extends ConsumerState<HomePage> {
               title: Text(e.title),
               subtitle: Text(e.singer),
             );
-          }).toList(),
-        ));
+          },
+        ).toList(),
+      ),
+    );
   }
 }
