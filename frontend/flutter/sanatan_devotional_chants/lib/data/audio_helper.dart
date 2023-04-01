@@ -3,8 +3,23 @@ import 'package:flutter/material.dart';
 
 final assetsAudioPlayer = AssetsAudioPlayer();
 
-Future<void> load(String url) async {
-  await assetsAudioPlayer.open(Audio.network(url));
+Future<void> load(
+  String url, {
+  String name = "",
+  String author = "",
+  String image = "",
+}) async {
+  await assetsAudioPlayer.open(
+    Audio.network(
+      url,
+      metas: Metas(
+        title: name,
+        artist: author,
+        image: MetasImage.network(image),
+      ),
+    ),
+    showNotification: true,
+  );
   debugPrint("Audio loaded successfully!");
 }
 

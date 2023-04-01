@@ -31,11 +31,14 @@ class _HomePageState extends ConsumerState<HomePage> {
                 print(soundId);
                 print(data.songs.toString());
 
-                for (Map e in data.songs) {
-                  if (e.keys.first == soundId) {
-                    var filteredUrl = getUrl(e.values.first);
-                    await load(filteredUrl);
-                    await playOrPause();
+                for (Map item in data.songs) {
+                  if (item.keys.first == soundId) {
+                    var filteredUrl = getUrl(item.values.first);
+                    await load(
+                      filteredUrl,
+                      author: e["author"],
+                      name: e["name"],
+                    );
                   }
                 }
               },
