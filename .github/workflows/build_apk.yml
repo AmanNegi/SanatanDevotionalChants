@@ -29,7 +29,7 @@ jobs:
 
       - name: Configure remote URL
         run: |
-          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/amannegi/flutter_minesweeper.git
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/amannegi/sanatandevotionalchants.git
 
       - name: Configure Git
         run: |
