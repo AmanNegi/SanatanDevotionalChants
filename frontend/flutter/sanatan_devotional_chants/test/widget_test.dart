@@ -1,11 +1,12 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:sanatan_devotional_chants/data/audio_helper.dart';
-import 'package:sanatan_devotional_chants/data/data.dart';
+import 'package:sanatan_devotional_chants/data/data_repository.dart';
 
 void main() {
   test("Test if we are getting data from", () async {
     await Future.delayed(const Duration(seconds: 1));
-    await getData();
+
+    await fetchMusicData(await fetchSongs());
     await Future.delayed(const Duration(seconds: 2));
   });
   test("Test if getURL works", () async {
