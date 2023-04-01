@@ -6,7 +6,7 @@ class MusicItem {
   final String singer;
   final String image;
   final String source;
-  late String audioUrl;
+  final String audioUrl;
 
   MusicItem({
     required this.id,
@@ -14,7 +14,7 @@ class MusicItem {
     required this.singer,
     required this.image,
     required this.source,
-    this.audioUrl = "",
+    required this.audioUrl,
   });
 
   MusicItem copyWith({
@@ -53,6 +53,7 @@ class MusicItem {
       singer: map['singer'] as String,
       image: map['image'] as String,
       source: map['source'] as String,
+      audioUrl: map['audioUrl'] as String,
     );
   }
 

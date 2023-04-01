@@ -6,7 +6,7 @@ void main() {
   test("Test if we are getting data from", () async {
     await Future.delayed(const Duration(seconds: 1));
 
-    await fetchMusicData(await fetchSongs());
+    await fetchMusicData();
     await Future.delayed(const Duration(seconds: 2));
   });
   test("Test if getURL works", () async {

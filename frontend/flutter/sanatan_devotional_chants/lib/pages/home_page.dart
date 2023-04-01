@@ -27,10 +27,6 @@ class _HomePageState extends ConsumerState<HomePage> {
           children: data.getData().map((e) {
             return ListTile(
               onTap: () async {
-                String soundId = e.id.toString();
-                print(soundId);
-                print(data.getSongs().toString());
-
                 var filteredUrl = getUrl(e.audioUrl);
                 await load(
                   filteredUrl,
