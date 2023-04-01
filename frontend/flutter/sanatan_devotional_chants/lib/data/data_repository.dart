@@ -14,7 +14,12 @@ class DataProvider extends ChangeNotifier {
   List<LyricsItem> _lyrics = [];
 
   List<MusicItem> getData() => [..._data];
-  List<LyricsItem> getLyrics() => [..._lyrics];
+  LyricsItem getLyrics(String id) {
+    var data = _lyrics.where((element) => element.id == id);
+    if (data.isEmpty) return LyricsItem(id: id, lyrics: "");
+
+    return data.first;
+  }
 
   DataProvider() {
     _initData();
@@ -52,6 +57,5 @@ Future<List<LyricsItem>> fetchLyricsData() async {
   for (Map<String, dynamic> e in dataList) {
     data.add(LyricsItem.fromMap(e));
   }
-
   return data;
 }
