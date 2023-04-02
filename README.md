@@ -13,7 +13,7 @@ Sanatan Devotional Chant is a community-based open-source application that aims 
 
 ## Why we built it?
 
-- India as a country has been in existence from time unknown. However, in the recent years our history and culture has been tampered and modified in various ways. Now it's time that we ourselves take an initiative to build what we believe on.
+- India as a country has been in existence for a time unknown. However, in recent years our history and culture have been tampered with and modified in various ways. Now it's time that we take an initiative to build what we believe in.
 - While there are many apps available in the market that offer devotional music and prayers, most of them come with bloated ads or are paid, providing a bad user experience. 
 - It is a problem that needs to be addressed, and we came up with a solution.
 
