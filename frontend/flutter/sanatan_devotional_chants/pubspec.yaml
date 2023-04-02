@@ -37,6 +37,7 @@ dependencies:
   google_fonts: ^4.0.3
   http: ^0.13.5
   material_design_icons_flutter: ^6.0.7096
+  text_scroll: ^0.2.0
 
 dev_dependencies:
   flutter_lints: ^2.0.0

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:sanatan_devotional_chants/pages/home_page.dart';
+import 'package:sanatan_devotional_chants/pages/nav_page.dart';
 
 import 'globals.dart';
 
@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
             secondary: accentLightColor,
           ),
         ),
-        home: const HomePage(),
+        home: const NavigationPage(),
       ),
     );
   }

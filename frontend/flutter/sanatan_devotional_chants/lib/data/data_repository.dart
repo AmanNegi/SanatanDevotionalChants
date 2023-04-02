@@ -14,11 +14,21 @@ class DataProvider extends ChangeNotifier {
   List<LyricsItem> _lyrics = [];
 
   List<MusicItem> getData() => [..._data];
+
   LyricsItem getLyrics(String id) {
     var data = _lyrics.where((element) => element.id == id);
     if (data.isEmpty) return LyricsItem(id: id, lyrics: "");
 
     return data.first;
+  }
+
+  List<MusicItem> searchItem(String title) {
+    return _data
+        .where(
+          (element) =>
+              element.title.toLowerCase().contains(title.toLowerCase()),
+        )
+        .toList();
   }
 
   DataProvider() {

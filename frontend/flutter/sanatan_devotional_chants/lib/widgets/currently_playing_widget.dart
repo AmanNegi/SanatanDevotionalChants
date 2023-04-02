@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:sanatan_devotional_chants/data/audio_helper.dart';
 import 'package:sanatan_devotional_chants/globals.dart';
+import 'package:text_scroll/text_scroll.dart';
 
 class CurrentlyPlayingWidget extends StatefulWidget {
   const CurrentlyPlayingWidget({super.key});
@@ -27,8 +27,11 @@ class _CurrentlyPlayingWidgetState extends State<CurrentlyPlayingWidget> {
             decoration: BoxDecoration(
               gradient: LinearGradient(
                 colors: [
-                  Colors.black,
-                  darkColor,
+                  // darkColor,
+                  // semiDarkColor,
+                  lightColor,
+                  lightColor,
+                  // accentLightColor,
                 ],
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
@@ -41,13 +44,16 @@ class _CurrentlyPlayingWidgetState extends State<CurrentlyPlayingWidget> {
               ),
               child: Row(
                 children: [
-                  // ClipRRect(
-                  //   borderRadius: BorderRadius.circular(5.0),
-                  //   child: Image.asset(
-                  //     snapshot.data!.audio.audio.metas.image!.path,
-                  //   ),
-                  // ),
-                  const Icon(MdiIcons.musicCircle),
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(5.0),
+                    child: Image.network(
+                      snapshot.data!.audio.audio.metas.image!.path,
+                      fit: BoxFit.cover,
+                      width: 0.15 * getWidth(context),
+                      height: double.infinity,
+                    ),
+                  ),
+                  // const Icon(MdiIcons.musicCircle),
                   const SizedBox(width: 15),
                   Expanded(
                     child: Container(
@@ -55,14 +61,18 @@ class _CurrentlyPlayingWidgetState extends State<CurrentlyPlayingWidget> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Text(
+                          TextScroll(
                             snapshot.data!.audio.audio.metas.title ?? "No Text",
-                            maxLines: 1,
+                            delayBefore: const Duration(seconds: 1),
+                            fadeBorderSide: FadeBorderSide.both,
+                            pauseBetween: const Duration(seconds: 2),
                           ),
-                          Text(
+                          TextScroll(
                             snapshot.data!.audio.audio.metas.artist ??
                                 "No Text",
-                            maxLines: 1,
+                            delayBefore: const Duration(seconds: 1),
+                            fadeBorderSide: FadeBorderSide.both,
+                            pauseBetween: const Duration(seconds: 2),
                             style: TextStyle(
                               fontSize: 12,
                               color: Colors.white.withOpacity(0.4),

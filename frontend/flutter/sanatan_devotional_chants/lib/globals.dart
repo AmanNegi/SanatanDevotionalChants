@@ -1,12 +1,17 @@
 import 'package:flutter/material.dart';
 
-// ["483123","D9DFD0","785B47","FADFA9","F5CE9C"]
-Color darkColor = const Color(0xFF482123);
-Color lightColor = const Color(0xFFD9DFD0);
-Color semiDarkColor = const Color(0xFF785B47);
-Color accentLightColor = const Color(0xFFFADFA9);
-// Color accentColor = const Color(0xFFF5CE9C);
-Color accentColor = const Color(0xFFffb703);
+// Color darkColor = const Color(0xFF020202);
+// Color lightColor = const Color(0xFF0d2818);
+// Color semiDarkColor = const Color(0xFF04471c);
+// Color accentLightColor = const Color(0xFF058c42);
+// Color accentColor = const Color(0xFF16db65);
+
+
+Color darkColor = const Color(0xFF370617);
+Color lightColor = const Color(0xFF9d0208);
+Color semiDarkColor = const Color(0xFF6a040f);
+Color accentLightColor = const Color(0xFFd00000);
+Color accentColor = const Color(0xFFf9a03f);
 
 Future goToPage(BuildContext context, Widget destination,
     {bool clearStack = false}) {
