@@ -1,5 +1,6 @@
 # Sanatan Devotional Chants
-![](https://img.shields.io/badge/Flutter-%2302569B.svg?style=for-the-badge&logo=Flutter&logoColor=white)
+![Flutter](https://img.shields.io/badge/Flutter-%2302569B.svg?style=for-the-badge&logo=Flutter&logoColor=white)
+![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)
 
 <!-- Sanatan Devotional Chant is an app that aims to preserve and promote the rich cultural heritage of India by providing a platform to access various mantras, bhajans, and aartis with lyrics and audio. In today's fast-paced world, we are gradually forgetting our roots and cultural values, and this app seeks to bridge that gap. -->
 
@@ -23,8 +24,12 @@ Sanatan Devotional Chant is a community-based open-source application that aims 
 - Community Driven Platform, promoting contributions from everyone.
 - Connect Individuals with their roots.
 - & more
-## Contributions
 
+## Releases
+
+- Currently, we are only available on Android Devices. [Download](./outputs/) the app now.
+
+## Contributions
 We appreciate all contributions from the community, and we would like everyone to contribute whether it's code or no-code.
 
 ### Types of Contributions
