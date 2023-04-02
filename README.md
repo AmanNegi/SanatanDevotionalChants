@@ -12,6 +12,18 @@ Our mission is to create a platform that promotes and preserves the cultural and
 
 Sanatan Devotional Chant is a community-based open-source application that aims to promote and preserve the cultural and spiritual heritage of India. The app provides a platform to access various mantras, bhajans, and aartis with lyrics and audio, making it easy for users to immerse themselves in the spiritual experience.
 
+- [Sanatan Devotional Chants](#sanatan-devotional-chants)
+  - [Why we built it?](#why-we-built-it)
+  - [What do we aim for?](#what-do-we-aim-for)
+  - [Releases](#releases)
+  - [Contributions](#contributions)
+    - [Types of Contributions](#types-of-contributions)
+    - [Steps to Add Mantra/Bhajan/Aarti](#steps-to-add-mantrabhajanaarti)
+    - [Steps to Code Contributions](#steps-to-code-contributions)
+  - [Installation](#installation)
+  - [License](#license)
+
+
 ## Why we built it?
 
 - India as a country has been in existence for a time unknown. However, in recent years our history and culture have been tampered with and modified in various ways. Now it's time that we take an initiative to build what we believe in.
